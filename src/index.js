@@ -28,7 +28,7 @@ navigator.mediaDevices.getUserMedia({
 
 
 let bc;
-const sendMessage = obj => bc && bc.readyState === WebSocket.OPEN) bc.send(JSON.stringify(obj));
+const sendMessage = obj => bc && bc.readyState === WebSocket.OPEN && bc.send(JSON.stringify(obj));
 
 function debounce(func, wait, immediate) {
     let timeout;
